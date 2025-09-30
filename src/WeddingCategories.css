@@ -1,0 +1,132 @@
+/* Container + header */
+.wc-container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+.wc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.wc-header h2 {
+  font-size: 26px;
+  font-weight: 650;
+}
+.wc-header button {
+  border: none;
+  background: none;
+  color: #e91e63;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Grid */
+.wc-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Card */
+.wc-card {
+  background: #f5f5f5;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 0px ;
+  padding-left: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform .2s ease;
+  cursor: pointer;
+}
+.wc-card:hover { transform: translateY(-2px); }
+
+.wc-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wc-card-text h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 650;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.wc-card-text p {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: #404040;
+  line-height: 1.35;
+}
+
+/* Right image: clipped half-oval like screenshot */
+.wc-card-img {
+  width: 200px;
+  height: 120px;
+  border-radius: 60px 0 0 60px;  /* half pill */
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.wc-card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Arrow flip */
+.arrow { font-size: 16px; transform: rotate(0deg); transition: transform .25s ease; }
+.arrow.up { transform: rotate(180deg); }
+
+/* Expanded behaviour */
+.wc-card.expanded { grid-column: 1 / -1; } /* span full row */
+.wc-details {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height .35s ease, opacity .35s ease, margin-top .35s ease;
+}
+.wc-details.open {
+  max-height: 360px; /* enough space for items */
+  opacity: 1;
+  margin-top: 14px;
+}
+
+/* Details panel (white block) like the 2nd image */
+.wc-details-inner {
+  background: #fff;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,.06);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 28px;
+}
+.wc-detail-item {
+  font-size: 15px;
+  color: #333;
+}
+
+/* Background colors per card (cycle to match your screenshot tones) */
+.wc-color-1 { background: #e8edff; }  /* light blue */
+.wc-color-2 { background: #ffe2d2; }  /* peach */
+.wc-color-3 { background: #e7bcbc; }  /* rose */
+.wc-color-4 { background: #ffd8b5; }  /* light orange */
+.wc-color-5 { background: #ffe9d6; }  /* cream */
+.wc-color-6 { background: #efe2cc; }  /* beige */
+
+/* Responsive */
+@media (max-width: 860px) {
+  .wc-grid { grid-template-columns: 1fr; }
+  .wc-card.expanded { grid-column: auto; }
+  .wc-card-img { width: 160px; height: 100px; }
+  .wc-details-inner { grid-template-columns: 1fr; gap: 10px; }
+}
+
+
+

@@ -1,0 +1,127 @@
+.photos-page {
+  min-height: 100vh;
+  background: radial-gradient(900px 400px at 10% 0%, #fff0f6, transparent),
+              radial-gradient(700px 300px at 100% 20%, #ffe4f1, transparent),
+              #ffffff;
+}
+
+.photos-hero {
+  padding: 36px 20px;
+  text-align: center;
+  color: #111827;
+}
+
+.photos-hero h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  background: linear-gradient(135deg, #e91e63, #ff6ea9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.photos-hero p {
+  margin: 0;
+  color: #6b7280;
+}
+
+.photos-content {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 20px;
+  padding: 0 20px 40px;
+}
+
+.photos-sidebar {
+  position: sticky;
+  top: 12px;
+  height: max-content;
+  background: #fff;
+  border: 1px solid #f3e0e8;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.photos-sidebar h4 {
+  margin: 10px 0 6px;
+  color: #e91e63;
+}
+
+.photos-sidebar ul {
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 0;
+}
+
+.photos-sidebar li {
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.photos-sidebar li:hover {
+  background: #fff4f8;
+}
+
+.photos-sidebar li.active {
+  background: #ffe3ef;
+  color: #c2185b;
+}
+
+.masonry {
+  column-count: 3;
+  column-gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .masonry { column-count: 2; }
+  .photos-content { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .masonry { column-count: 1; }
+}
+
+.masonry-item {
+  break-inside: avoid;
+  margin-bottom: 12px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(233, 30, 99, 0.12);
+  transform: translateY(10px);
+  opacity: 0;
+  animation: cardIn 500ms ease forwards;
+}
+
+.masonry-item img {
+  width: 100%;
+  display: block;
+  transition: transform 300ms ease;
+}
+
+.masonry-item:hover img {
+  transform: scale(1.05);
+}
+
+.img-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 8px;
+  background: linear-gradient(to top, rgba(0,0,0,0.35), transparent 60%);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 250ms ease;
+}
+
+.masonry-item:hover .img-overlay { opacity: 1; }
+
+@keyframes cardIn {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+

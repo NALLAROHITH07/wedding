@@ -1,0 +1,46 @@
+.invites-page {
+  min-height: 100vh;
+  background: radial-gradient(900px 400px at 10% 0%, #fff7fb, transparent),
+              radial-gradient(700px 300px at 100% 20%, #ffe6f3, transparent),
+              #ffffff;
+  padding: 24px 20px 40px;
+}
+
+.invites-hero { text-align: center; margin-bottom: 12px; }
+.invites-hero h1 {
+  margin: 0 0 6px;
+  background: linear-gradient(135deg, #e91e63, #ff6ea9);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.invites-hero p { margin: 0; color: #6b7280; }
+
+.invites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.invite-card {
+  background: #fff;
+  border: 1px solid #f3e0e8;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(233, 30, 99, 0.1);
+  cursor: pointer;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+.invite-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px rgba(233,30,99,0.16); }
+
+.invite-img-wrap { position: relative; }
+.invite-img-wrap img { width: 100%; display: block; }
+.invite-overlay {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  background: rgba(0,0,0,0.35); color: #fff; opacity: 0; transition: opacity 200ms ease;
+  font-weight: 600; letter-spacing: .2px;
+}
+.invite-card:hover .invite-overlay { opacity: 1; }
+
+.invite-info { padding: 10px 12px; }
+.invite-info h3 { margin: 0; font-size: 16px; color: #111827; }
+
+

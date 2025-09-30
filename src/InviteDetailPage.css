@@ -1,0 +1,47 @@
+.invite-detail-page {
+  min-height: 100vh;
+  background: radial-gradient(900px 400px at 10% 0%, #fff7fb, transparent),
+              radial-gradient(700px 300px at 100% 20%, #ffe6f3, transparent),
+              #ffffff;
+  padding: 24px 20px 40px;
+}
+.detail-hero { text-align: center; margin-bottom: 12px; }
+.detail-hero h1 {
+  margin: 0 0 6px;
+  background: linear-gradient(135deg, #e91e63, #ff6ea9);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.detail-hero p { margin: 0; color: #6b7280; }
+
+.detail-content { display: grid; grid-template-columns: 1fr 360px; gap: 20px; }
+@media (max-width: 900px) { .detail-content { grid-template-columns: 1fr; } }
+
+.detail-preview { display: flex; align-items: center; justify-content: center; }
+.card-canvas {
+  width: 100%;
+  max-width: 720px;
+  aspect-ratio: 4 / 3;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(233, 30, 99, 0.15);
+}
+.card-overlay {
+  position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  backdrop-filter: brightness(0.9) saturate(1.1);
+  text-align: center; color: #1f2937;
+}
+.names { font-size: 36px; margin: 0 0 8px; text-shadow: 0 2px 10px rgba(255,255,255,0.6); }
+.info-line { margin: 4px 0; font-weight: 600; }
+
+.detail-form { background: #fff; border: 1px solid #f3e0e8; border-radius: 14px; padding: 14px; height: max-content; }
+.form-row { margin-bottom: 12px; }
+.form-row label { display: block; font-size: 13px; color: #374151; margin-bottom: 6px; }
+.form-row input { width: 100%; padding: 10px 12px; border: 1px solid #e5e7eb; border-radius: 10px; outline: none; }
+.actions { display: flex; gap: 10px; margin-top: 8px; }
+.primary { background: linear-gradient(135deg, #e91e63, #ff6ea9); border: none; color: #fff; padding: 10px 14px; border-radius: 10px; cursor: pointer; }
+.secondary { background: #f9fafb; border: 1px solid #e5e7eb; color: #374151; padding: 10px 14px; border-radius: 10px; cursor: pointer; }
+
+

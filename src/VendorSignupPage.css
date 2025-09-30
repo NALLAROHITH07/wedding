@@ -1,0 +1,108 @@
+.vendor-hero {
+	background: linear-gradient(135deg, #7f5af0, #ff5470);
+	padding: 48px 16px;
+	text-align: center;
+	color: #fff;
+	border-bottom-left-radius: 24px;
+	border-bottom-right-radius: 24px;
+}
+
+.signup-container {
+	min-height: calc(100vh - 120px);
+	background: radial-gradient(1200px 600px at top right, rgba(127,90,240,0.08), transparent),
+		radial-gradient(900px 500px at bottom left, rgba(255,84,112,0.08), transparent);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 32px 16px;
+}
+
+.signup-card {
+	width: 100%;
+	max-width: 920px;
+	background: #fff;
+	box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+	border-radius: 20px;
+	padding: 28px;
+	border: 1px solid rgba(0,0,0,0.06);
+	position: relative;
+}
+
+.signup-card h2 {
+	font-size: 28px;
+	margin: 0 0 8px 0;
+	background: linear-gradient(90deg, #6c5ce7, #ff7675);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.signup-subtitle {
+	margin: 0 0 24px 0;
+	color: #555;
+}
+
+.form-row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 16px;
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-group label {
+	font-weight: 600;
+	margin-bottom: 8px;
+	color: #333;
+}
+
+.form-group input,
+.form-group select {
+	padding: 12px 14px;
+	border-radius: 10px;
+	border: 1px solid #e5e7eb;
+	background: #fafbff;
+	font-size: 14px;
+	outline: none;
+	transition: box-shadow .2s ease, border-color .2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+	border-color: #7f5af0;
+	box-shadow: 0 0 0 4px rgba(127,90,240,0.15);
+}
+
+.vendor-primary-btn {
+	background: linear-gradient(90deg, #7f5af0, #ff5470);
+	border: none;
+	color: #fff;
+	font-weight: 700;
+	letter-spacing: 0.3px;
+	padding: 12px 16px;
+	border-radius: 12px;
+	cursor: pointer;
+	transition: transform .05s ease, filter .2s ease;
+}
+
+.vendor-primary-btn:hover {
+	filter: brightness(1.05);
+}
+
+.vendor-primary-btn:active {
+	transform: translateY(1px);
+}
+
+@media (max-width: 720px) {
+	.form-row {
+		grid-template-columns: 1fr;
+	}
+	.signup-card {
+		padding: 20px;
+	}
+}
+
+
